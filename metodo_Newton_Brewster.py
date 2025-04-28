@@ -11,13 +11,13 @@ import matplotlib.pyplot as plt
 
 """ Funciones para estudio de ondas tipo TE """
 
-# Definición de la función f(x) asociada a modos de ondas TE
+# Definición de la función f(x) asociada a modos de ondas TE --> En guias de onda
 def funcion_modosTE(x, m):
     term1 = 3 * np.pi * np.cos(x)
     term2 = 2 * np.arctan(((1 / (1.5 * np.cos(x))) * np.sqrt(2.25 * np.sin(x)**2 - 1)))
     return term1 - term2 - m * np.pi
 
-# Derivada de la función f(x) de TE --> Resultado necesario para el Método de Newton-Brester
+# Derivada de la función f(x) de TE en guias de onda--> Resultado necesario para el Método de Newton-Brester
 def funcion_modosTEDerivada(x, m):
 
     # Derivada de term1: 3*pi*cos(x)
@@ -33,13 +33,13 @@ def funcion_modosTEDerivada(x, m):
 
 """ Funciones para estudio de ondas tipo TE """
 
-# Definición de la función f(x) asociada a modos de ondas TM
+# Definición de la función f(x) asociada a modos de ondas TM --> En guias de onda
 def funcion_modosTM(x, m):
     term1 = 3 * np.pi * np.cos(x)
     term2 = 2 * np.arctan((1.5 / np.cos(x)) * np.sqrt(2.25 * np.sin(x)**2 - 1))
     return term1 - term2 - m * np.pi
 
-# Derivada de la función f(x) de TM --> Resultado necesario para el Método de Newton-Brester
+# Derivada de la función f(x) de TM en guias de onda --> Resultado necesario para el Método de Newton-Brester
 def funcion_modosTMDerivada(x, m):
     
     # Derivada de term1: 3*pi*cos(x)
