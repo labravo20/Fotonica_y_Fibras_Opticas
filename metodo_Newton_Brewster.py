@@ -84,22 +84,23 @@ def newton_brewster(f, f_prime, x0, m, tol=1e-6, max_iter=100):
 """ Definición de condiciones iniciales """
 
 # Valor inicial de x
-x0 = 1.3
+x0 = 0.8
 
 # Modo a evaluar en la función
-m = 1   
+m = 1
 
-
+### NOTA --> Verificar comparación de resultado grafico vs este código en m = 2 (Para TM y TE)
 
 """Llamando función para encontrar raiz (si existe) teniendo en cuenta el modo 'm' predeterminado"""
 
 # Llamando función para evaluar modos de ondas tipo TE
-root = newton_brewster(funcion_modosTE, funcion_modosTEDerivada, x0, m)
+#root = newton_brewster(funcion_modosTE, funcion_modosTEDerivada, x0, m)
 
 # Llamando función para evaluar modos de ondas tipo TM
-#root = newton_brewster(funcion_modosTM, funcion_modosTMDerivada, x0, m)
+root = newton_brewster(funcion_modosTM, funcion_modosTMDerivada, x0, m)
 
 
 # Proyección de los resultados en consola
 print(f"Raíz encontrada para m = {m}: x = {root}")
+
 
