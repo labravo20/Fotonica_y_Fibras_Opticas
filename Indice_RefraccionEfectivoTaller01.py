@@ -22,13 +22,13 @@ n_nucleo = 1.5
 n_cladding = 1
 
 #Longitud de onda 
-longitud_onda = 1E-6 #Unidades en METROS [m]
+longitud_onda = 1 #Unidades en METROS [um]
 
 #Ancho del núcleo del guía de onda
-ancho_Nucleo = 1E-6 #Unidades en METROS [m]
+ancho_Nucleo = 1 #Unidades en METROS [um]
 
 #Velocidad de la luz
-c = 3E8 #Unidades en METROS/SEGUNDO [m/s]
+c = 3*(10**14) #Unidades en METROS/SEGUNDO [um/s]
 
 #Número de onda
 numero_OndaVacio = 2*np.pi/longitud_onda
@@ -37,7 +37,7 @@ numero_OndaVacio = 2*np.pi/longitud_onda
 frecuencia_Angular = numero_OndaVacio*c
 
 #Permeabilidad en el vacío
-permeabilidad_vacio = (4E-7)*np.pi #Unidades H/m
+permeabilidad_vacio = (0.4)*np.pi #Unidades H/um
 
 
 """ Definiendo paŕametros de tetah"""
@@ -102,7 +102,7 @@ def indice_RefraccionEfectivoOndulatorio(indice_RefraccionNucleo, indice_Refracc
 
 """ Definición parámetros calculados para cada uno de los modos --> En caso de análisis ondulatorio """
 
-# Coordenadas de interceptos --> TALLER PARTE 02
+# Coordenadas de interceptos UNIDADES 1/um --> TALLER PARTE 02
 modo0TE = [1.2169799538,3.294839197]
 modo1TE = [2.392320866,2.571321]
 modo2TE = [3.3977765,0.890011778]
@@ -122,6 +122,7 @@ resultado_indiceRefraccionEfectivomodo2TM = indice_RefraccionEfectivoOndulatorio
 
 # Mostrando resultados en consola
 print("Análisis ondulatorio --> kappa")
+
 print(resultado_indiceRefraccionEfectivomodo0TE)
 print(resultado_indiceRefraccionEfectivomodo1TE)
 print(resultado_indiceRefraccionEfectivomodo2TE)
@@ -189,10 +190,10 @@ constantes_NormalizacionModo2TM = constantes_Normalizacion(frecuencia_Angular,be
 
 
 # Mostrando resultados en consola
-print(constantes_NormalizacionModo0TE)
-print(constantes_NormalizacionModo1TE)
-print(constantes_NormalizacionModo2TE)
-print(constantes_NormalizacionModo0TM)
-print(constantes_NormalizacionModo1TM)
-print(constantes_NormalizacionModo2TM)
+# print(constantes_NormalizacionModo0TE)
+# print(constantes_NormalizacionModo1TE)
+# print(constantes_NormalizacionModo2TE)
+# print(constantes_NormalizacionModo0TM)
+# print(constantes_NormalizacionModo1TM)
+# print(constantes_NormalizacionModo2TM)
 
